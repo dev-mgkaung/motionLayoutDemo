@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewPagerIntegration"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layoutDescription="@xml/activity_view_pager_integration_scene">
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:src="@drawable/rocket_background"
+            android:contentDescription="@string/star_background_content_description"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/ship_emoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rocket_emoji"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            android:textColor="?colorSecondary"
+            android:rotation="30"/>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+    
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    />
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
